@@ -1,0 +1,253 @@
+{
+	"info": {
+		"_postman_id": "4811dd67-5ecd-428e-95e7-fa46573b5ec5",
+		"name": "Propsoch",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26927951",
+		"_collection_link": "https://lunar-star-357370.postman.co/workspace/Postman-API-Fundamentals-Studen~953f361c-6ae6-4dd5-a2d8-57048267b3d6/collection/26927951-4811dd67-5ecd-428e-95e7-fa46573b5ec5?action=share&source=collection_link&creator=26927951"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "user create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"naksh@example.com\",\r\n  \"password\": \"password123\",\r\n  \"currency\": \"USD\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/api/users/users",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"naksh@gmail.com\",\r\n  \"currency\": \"USD\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/api/users/users/1",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "expense",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Travel\",\r\n  \"value\": 100,\r\n  \"currency\": \"USD\",\r\n  \"date\": \"2024-11-28\",\r\n  \"members\": [1, 2, 3]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/api/expenses/expenses/2",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"expenses",
+								"expenses",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/api/expenses/expenses/2",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"expenses",
+								"expenses",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Travel\",\r\n  \"value\": 150,\r\n  \"currency\": \"USD\",\r\n  \"date\": \"2024-11-28\",\r\n  \"members\": [1, 2, 3]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/api/expenses/expenses/2",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"expenses",
+								"expenses",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by user id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Travel\",\r\n  \"value\": 150,\r\n  \"currency\": \"USD\",\r\n  \"date\": \"2024-11-28\",\r\n  \"members\": [1, 2, 3]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/api/expenses/user/2",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"expenses",
+								"user",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "balances",
+			"item": [
+				{
+					"name": "get by user id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Travel\",\r\n  \"value\": 150,\r\n  \"currency\": \"USD\",\r\n  \"date\": \"2024-11-28\",\r\n  \"members\": [1, 2, 3]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/api/balances/balances/2",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"balances",
+								"balances",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "local",
+			"value": "http://localhost:3000"
+		}
+	]
+}
